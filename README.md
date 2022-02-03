@@ -1,34 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Introduction to Next.js
 
-## Getting Started
+Playing with [Next.js](https://nextjs.org/learn/basics/create-nextjs-app?utm_source=next-site&utm_medium=homepage-cta&utm_campaign=next-website)
+To learn server side rendering 🎉
 
-First, run the development server:
+## Exercise
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Step 1
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Create following pages: `client-side-rendering`, `server-side-rendering` and `static-site`
+- Add Link from home page to the recently created pages
+- Tip: Do not use only `a` tag
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Step 2
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Create an API called `user` that accepts only `GET method` and returns array of `Users`, other methods should return an `Error`
+- In page `client-side-rendering` use `useSWR` to fetch information in the client side
+- In page `server-side-rendering` add `getServerSideProps` to fetch information in the server at each request
+- In page `static-site` add `getStaticProps` to fetch information from server at build time.
+- At every page consume the API `user` and show users or error depending on the response
+- Tip 1: Use `User.type` and `Error.type` under types folder
+- Tip 2: Use `UserInfo` to show user information
