@@ -16,30 +16,10 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>Welcome User</h1>
 
         <div className={styles.grid}>
-          <Link href="/">
-            <a className={styles.card}>
-              <h2>Go To Home &rarr;</h2>
-              <p>Home Page</p>
-            </a>
-          </Link>
-          <Link href="/static-site">
-            <a className={styles.card}>
-              <h2>Go To SSG &rarr;</h2>
-              <p>Static site generated example</p>
-            </a>
-          </Link>
-          <Link href="/server-side-rendering">
-            <a className={styles.card}>
-              <h2>Go To SSR&rarr;</h2>
-              <p>Server side rendering example</p>
-            </a>
-          </Link>
-          <Link href="/client-side-rendering">
-            <a className={styles.card}>
-              <h2>Go To CSR &rarr;</h2>
-              <p>Client side rendering example</p>
-            </a>
-          </Link>
+          <a href="/" className={styles.card}>
+            <h2>Go To Home &rarr;</h2>
+            <p>Home Page</p>
+          </a>
         </div>
       </main>
     </div>
